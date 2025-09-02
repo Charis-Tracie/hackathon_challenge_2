@@ -1,0 +1,15 @@
+{
+  "chicken": [
+    { "name": "Garlic Butter Chicken", "ingredients": ["Chicken", "Garlic", "Butter", "Parsley"]}, 
+    { "name": "Chicken Curry", "ingredients": ["Chicken", "Onion", "Tomato", "Spices"]}, 
+    { "name": "Grilled Chicken Salad", "ingredients": ["Chicken", "Lettuce", "Tomato", "Cucumber", "Dressing"]}
+  ],
+  "rice": [
+    { "name": "Fried Rice", "ingredients": ["Rice", "Soy Sauce", "Eggs", "Vegetables"]},
+    { "name": "Rice Pudding", "ingredients": ["Rice", "Milk", "Sugar", "Cinnamon"]}, 
+    { "name": "Vegetable Biryani", "ingredients": ["Rice", "Carrots", "Peas", "Spices"]}
+  ] 
+}
+
+
+
