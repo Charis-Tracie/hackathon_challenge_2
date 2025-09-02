@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Recommender &#x1F374;</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>&#x1F374; FoodieAI</h2>
+    <nav>
+      <button onclick="goHome()"> Home</button>
+      <button onclick="showSaved()"> Saved Recipes</button>
+      <button onclick="showPopular()"> Popular</button>
+      <button onclick="showAbout()">About</button>
+    </nav>
+
+    <!-- Login Section -->
+    <div class="login-section">
+        
+      <h3>&#128100; Account</h3>
+      <input type="text" placeholder="Email" id="email">
+      <input type="password" placeholder="Password" id="password">
+      <button onclick="login()">Login</button>
+      <p class="signup-text">Don’t have an account? <a href="#">Sign up</a></p>
+      
+    </div>
+
+    <div class="sidebar-footer">
+      <button onclick="openSettings()">&#x2699; Settings</button>
+    </div>
+  </aside>
+
+  <!-- Main Chat Area -->
+  <main class="chat-container">
+    <header class="chat-header">
+      <h1>Find Recipes Instantly</h1>
+      <p>Type an ingredient and discover dishes &#x1F35B;</p>
+    </header>
+
+    <!-- Results Section -->
+    <div class="chat-messages" id="results">
+      <!-- Recipe cards will appear here -->
+    </div>
+
+    <!-- Input Area -->
+    <div class="chat-input">
+      <input type="text" id="ingredientInput" placeholder="Type your meal...">
+      <button onclick="searchRecipes()">&#x27A4;</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+

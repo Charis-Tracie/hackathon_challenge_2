@@ -1,0 +1,245 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  background: linear-gradient(135deg, #200483, #9e0202);
+  color: #333;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(120deg, #2a07f0, #f5221b); 
+  color: #a8eefa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  color: #4dfff6;
+  margin-bottom: 20px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: #ddd;
+  font-size: 1rem;
+  text-align: left;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar button:hover {
+  background: #03b4fa5b;
+  color: #fff;
+}
+
+.sidebar-footer {
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+/* Main Chat Container */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+  background: url("food3.jpg")/*linear-gradient(120deg, #2a07f0, #f5221b);*/;
+    background-size: cover;   /* makes it fill the screen */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat;
+}
+
+/* Subtle moving gradient */
+.chat-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(2, 2, 2, 0.452), transparent 60%);
+  animation: float 10s infinite linear;
+}
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Chat Header */
+.chat-header {
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.chat-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4dffb5;
+}
+
+.chat-header p {
+  font-size: 1rem;
+  color: #f5d2ec;
+}
+
+/* Chat Messages (Results Section) */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  z-index: 1;
+  color:#b5f5f2
+}
+
+.recipe-card {
+  background: #f8f081;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(236, 226, 226, 0.575);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(255,145,77,0.3);
+}
+
+/* Input Area */
+.chat-input {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  z-index: 2;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  background: #1c03fd57;
+  color: rgb(243, 201, 237);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background: #e9038967;
+}
+
+
+
+/* Login Section */
+.login-section {
+  margin-top: auto;
+  padding: 15px;
+  border-top: 1px solid #522e2e;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-section h3 {
+  font-size: 1.1rem;
+  color: #93eef5;
+}
+
+.login-section input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.login-section button {
+  background: #e74661;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-section button:hover {
+  background: #2d02a1;
+}
+
+.signup-text {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.signup-text a {
+  color: #e5a4ee;
+  text-decoration: none;
+}
+
+/* Dark theme support */
+.dark-theme {
+  background: url("food2.jpg") no-repeat center center;
+  background-size: cover;
+  color: #f1f1f1;
+}
+
+
+.dark-theme .chat-container {
+  background: url("food2.jpg") no-repeat center center;
+  background-size: cover
+}
+
+.dark-theme .card {
+  /*background: #333;*/
+  color: #f1f1f1;
+}
+
+
+
+
